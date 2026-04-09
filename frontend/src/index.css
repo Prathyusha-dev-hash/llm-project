@@ -1,0 +1,59 @@
+:root {
+  --bg:         #FAFAF8;
+  --panel:      #ffffff;
+  --sidebar:    #F4F3EF;
+  --border:     #E8E6E1;
+  --border2:    #D4D0C8;
+  --text:       #1A1916;
+  --text2:      #6B6760;
+  --text3:      #A8A49C;
+  --accent:     #2D5BE3;
+  --accent-bg:  #EEF2FD;
+  --green:      #1A7A4A;
+  --green-bg:   #EDFAF3;
+  --amber:      #92540A;
+  --amber-bg:   #FEF6E8;
+  --red:        #B91C1C;
+  --red-bg:     #FEF2F2;
+  --r:   12px;
+  --rs:   8px;
+  --sh:  0 1px 4px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.04);
+  --shm: 0 2px 8px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Geist', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root { display: flex; height: 100vh; width: 100vw; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulseDot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(26,122,74,.35); }
+  50%     { box-shadow: 0 0 0 4px rgba(26,122,74,0); }
+}
+@keyframes typingBounce {
+  0%,60%,100% { transform: translateY(0);  opacity: .4; }
+  30%         { transform: translateY(-4px); opacity: 1; }
+}
+@keyframes toastLife {
+  0% { opacity: 0; transform: translateX(-50%) translateY(60px); }
+  12%, 82% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(60px); }
+}
